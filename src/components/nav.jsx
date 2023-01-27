@@ -25,7 +25,7 @@ const Nav = () => {
     ]
     return (
         <nav className="bg-white">
-            <div className="flex md:items-center font-medium justify-between mx-6">
+            <div className="flex md:items-center font-medium justify-between">
                 <div className="z-50 p-5 md:w-auto w-full flex justify-between">
                     <img src={logo} alt="" className="md:cursor-pointer  h-9" />
                     <div className="text-3xl md:hidden cursor-pointer" onClick={() => setOpen(!open)}>
