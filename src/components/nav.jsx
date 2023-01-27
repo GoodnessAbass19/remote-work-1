@@ -38,7 +38,7 @@ const Nav = () => {
                             <div>
                                 <div className="px-3 text-left md:cursor-pointer group ">
 
-                                    <h1 className="py-7" onClick={() => setUp(!up)}>{link.name} <ion-icon name= "chevron-down"></ion-icon></h1>
+                                    <h1 className="py-7" onClick={() => setUp(!up)}> <a href="/">{link.name}</a></h1>
 
                                     {link.submenu && (
                                         <div>
@@ -77,9 +77,11 @@ const Nav = () => {
                 {/* mobile nav */}
                 <ul className={`md:hidden bg-white absolute w-2/3 right-0 h-full bottom-0 py-24 pl-24 duration-500 ${open ? 'right-0' : 'right-[-100%]'}`}>
                     <li>
-                        <Link to="/" className="py-7 px-3 inline-block">
-                            Feature
-                        </Link>
+                       {
+                        links.map((Link) =>(
+                            <h1 className="py-7" onClick={() => setUp(!up)}> <a href="/">{Link.name}</a></h1>
+                        ) )
+                       }
                     </li>
                     <Navlink />
                     <div className="py-5 grid mx-auto">
